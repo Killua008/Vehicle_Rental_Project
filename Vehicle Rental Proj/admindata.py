@@ -14,7 +14,7 @@ def inserting(id,name,vechtype,fueltype,avail,rent):
     if(id1== "" or name1=="" or vechtype1=="" or fueltype1=="" or avail1=="" or rent1==""):
         MessageBox.showinfo("Insert Status","All Fields are required")
     else:
-        con=mysql.connect(host="localhost",user="root",passwd="NewPass",database="admin")
+        con=mysql.connect(host="",user="",passwd="",database="")
         cursor=con.cursor()
 
         cursor.execute("Insert into vehicle values('"+ id1 +"','"+ name1 +"','"+ vechtype1+"','" + fueltype1+ "','" + rent1 +"','"+ avail1 +"')")
