@@ -15,7 +15,7 @@ def booking(id,name,vechtype,fueltype,FromDate,ToDate,Email):
     if(id1== "" or name1=="" or vechtype1=="" or fueltype1=="" or FromDate1=="" or ToDate=="" or Email_id==""):
         MessageBox.showinfo("Insert Status","All Fields are required")
     else:
-        con=mysql.connect(host="localhost",user="root",passwd="NewPass",database="admin")
+        con=mysql.connect(host="",user="",passwd="",database="")
         cursor=con.cursor()
         
         cursor.execute("Insert into booking values('"+ id1 +"','"+ name1 +"','"+ vechtype1+"','" + fueltype1+ "','" + FromDate1 +"','"+ ToDate1 +"','"+ Email_id + "')")
@@ -34,7 +34,7 @@ def booking(id,name,vechtype,fueltype,FromDate,ToDate,Email):
 def availibility(id):
     id1=id
     i=0
-    con=mysql.connect(host="localhost",user="root",passwd="NewPass",database="admin")
+    con=mysql.connect(host="",user="",passwd="",database="")
     cursor=con.cursor()
         
     sql="Update Vehicle Set Avail=%s where id=%s"
